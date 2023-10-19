@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>kkkqwerasdf123.github.io</h1>
+
+<div>
+    <p>test</p>
+    <input type="text" id="input-text">
+    <button type="button" id="button-console">console</button>
+    <button type="button" id="button-alert">alert</button>
+</div>
+
+
+
+<script src="js/test-service.js"></script>
+<script>
+
+    const consoleButton = document.getElementById('button-console');
+    const alertButton = document.getElementById('button-alert')
+    const textInput = document.getElementById('input-text');
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+        consoleButton.addEventListener('click', (e) => {
+            const text = textInput.value.trim();
+            if (!text) {
+                return;
+            }
+            testService.console(text);
+        })
+
+        alertButton.addEventListener('click', (e) => {
+            const text = textInput.value.trim();
+            if (!text) {
+                return;
+            }
+            testService.alert(text);
+        })
+
+    })
+
+</script>
+</body>
+</html>
