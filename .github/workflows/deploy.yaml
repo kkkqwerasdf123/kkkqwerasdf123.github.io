@@ -16,3 +16,4 @@ jobs:
         uses: bitovi/github-actions-react-to-github-pages@v1.2.2
         with:
           path: dist # change to your build folder
+          install_command: "npm run build && cp dist/index.html dist/404.html"
